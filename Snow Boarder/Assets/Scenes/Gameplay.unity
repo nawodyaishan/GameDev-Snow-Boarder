@@ -252,7 +252,17 @@ MonoBehaviour:
       m_CornerMode: 1
     - position: {x: -2, y: 1, z: 0}
       leftTangent: {x: -1.0023332, y: 0.0010559559, z: 0}
-      rightTangent: {x: 1.0023332, y: -0.0010559559, z: -0}
+      rightTangent: {x: 0.5780592, y: -0.00060898066, z: 0}
+      mode: 1
+      height: 1
+      bevelCutoff: 0
+      bevelSize: 0
+      spriteIndex: 0
+      corner: 1
+      m_CornerMode: 1
+    - position: {x: 0.28158915, y: 0.95546156, z: 0}
+      leftTangent: {x: -0.84664357, y: -0.06493625, z: -0}
+      rightTangent: {x: 0.94719756, y: 0.072648585, z: 0}
       mode: 1
       height: 1
       bevelCutoff: 0
@@ -261,7 +271,7 @@ MonoBehaviour:
       corner: 1
       m_CornerMode: 1
     - position: {x: 2, y: 1, z: 0}
-      leftTangent: {x: -1.0005913, y: -0.0016920567, z: -0}
+      leftTangent: {x: -0.42353678, y: -0.0007162094, z: 0}
       rightTangent: {x: 1.0005913, y: 0.0016920567, z: 0}
       mode: 1
       height: 1
@@ -280,7 +290,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-  m_SpriteShape: {fileID: 11400000, guid: f24cddf7c09a6442abbce710a6fd7397, type: 2}
+  m_SpriteShape: {fileID: 11400000, guid: fa7a5900138574e1799c6ae0865773b3, type: 2}
   m_FillPixelPerUnit: 256
   m_StretchTiling: 1
   m_SplineDetail: 16
@@ -352,8 +362,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 0.00027251244, y: -0.0002721548, z: 0}
-    m_Extent: {x: 2.589231, y: 1.250067, z: 0}
+    m_Center: {x: 0.00027251244, y: 0.002321124, z: 0}
+    m_Extent: {x: 2.589231, y: 1.2526603, z: 0}
 --- !u!4 &884921901
 Transform:
   m_ObjectHideFlags: 0
@@ -362,7 +372,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884921898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.49, y: -1.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
