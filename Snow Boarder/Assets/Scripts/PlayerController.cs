@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float torqueMagnitude;
     [SerializeField] private float highSpeed;
+    private bool canMove = true;
 
     private SurfaceEffector2D _sf2d;
 
@@ -23,8 +24,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AddTorqueInput();
-        RespondToBoost();
+        if (canMove)
+        {
+            AddTorqueInput();
+            RespondToBoost();
+        }
     }
 
     private void RespondToBoost()
@@ -50,4 +54,11 @@ public class PlayerController : MonoBehaviour
             _rigid2D.AddTorque((-1) * Time.deltaTime * torqueMagnitude);
         }
     }
+
+
+    public void DisableControls()
+    {
+        canMove = false;
+    }
+    
 } // Class

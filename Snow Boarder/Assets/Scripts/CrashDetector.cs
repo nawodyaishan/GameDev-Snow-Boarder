@@ -15,6 +15,8 @@ public class CrashDetector : MonoBehaviour
     [SerializeField] private GameObject player;
     private AudioSource crashSound;
 
+    private bool hasCrashed = false;
+
     //[SerializeField] private AudioClip crashSFX;
 
     // Start is called before the first frame update
@@ -30,13 +32,15 @@ public class CrashDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !hasCrashed)
         {
+            hasCrashed = true;
             Debug.Log("Crashed");
             headRed();
             crashEffect.Play();
             Invoke(nameof(CrashReloadingScene), crashDelay);
             crashSound.Play();
+            FindObjectOfType<PlayerController>().DisableControls();
 
             // GetComponent<AudioSource>().PlayOneShot(crashSFX);
         }
@@ -52,4 +56,7 @@ public class CrashDetector : MonoBehaviour
         SpriteRenderer sp = head.GetComponent<SpriteRenderer>();
         sp.color = Color.red;
     }
+
+
+
 }

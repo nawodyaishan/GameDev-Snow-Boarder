@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
 
-    [SerializeField] private GameObject loadingCanvas;
+    [SerializeField] private GameObject loaderCanvas;
 
     private void Awake()
     {

@@ -14,4 +14,10 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void OpenGithub()
+    {
+        Application.OpenURL("https://github.com/nawodyaishan/GameDev-Snow-Boarder");
+    }
+    
 }
