@@ -56,7 +56,4 @@ public class CrashDetector : MonoBehaviour
         SpriteRenderer sp = head.GetComponent<SpriteRenderer>();
         sp.color = Color.red;
     }
-
-
-
 }
