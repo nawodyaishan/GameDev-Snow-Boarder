@@ -10,9 +10,12 @@ public class FinishLine : MonoBehaviour
 
     [SerializeField] private ParticleSystem finishEffect;
 
+    private AudioSource finishSound;
+
     // Start is called before the first frame update
     void Start()
     {
+        finishSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +30,7 @@ public class FinishLine : MonoBehaviour
             Debug.Log("You Finished");
             finishEffect.Play();
             Invoke(nameof(ReloadingScene), delay);
+            finishSound.Play();
         }
     }
 

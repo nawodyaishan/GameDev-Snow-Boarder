@@ -12,9 +12,15 @@ public class CrashDetector : MonoBehaviour
 
     [SerializeField] private GameObject head;
 
+    [SerializeField] private GameObject player;
+    private AudioSource crashSound;
+
+    //[SerializeField] private AudioClip crashSFX;
+
     // Start is called before the first frame update
     void Start()
     {
+        crashSound = player.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,6 +36,9 @@ public class CrashDetector : MonoBehaviour
             headRed();
             crashEffect.Play();
             Invoke(nameof(CrashReloadingScene), crashDelay);
+            crashSound.Play();
+
+            // GetComponent<AudioSource>().PlayOneShot(crashSFX);
         }
     }
 
