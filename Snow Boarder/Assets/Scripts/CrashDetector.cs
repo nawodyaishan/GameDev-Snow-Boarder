@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CrashDetector : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class CrashDetector : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Crashed");
+            SceneManager.LoadScene("Level1");
         }
     }
 }

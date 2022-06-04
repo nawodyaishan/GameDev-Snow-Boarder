@@ -21,7 +21,7 @@ public class FinishLine : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             Debug.Log("You Finished");
-            SceneManager.LoadScene("Level 1");
+            SceneManager.LoadScene("Level1");
         }
         
     }
