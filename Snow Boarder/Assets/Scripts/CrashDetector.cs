@@ -10,6 +10,8 @@ public class CrashDetector : MonoBehaviour
     [SerializeField] private float crashDelay;
     
     [SerializeField] private ParticleSystem crashEffect;
+
+    [SerializeField] private GameObject head;
     
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class CrashDetector : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Crashed");
+            headRed();
             crashEffect.Play();
             Invoke(nameof(CrashReloadingScene), crashDelay);
         }
@@ -36,4 +39,13 @@ public class CrashDetector : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
+
+    void headRed()
+    {
+        SpriteRenderer sp = head.GetComponent<SpriteRenderer>();
+        sp.color = Color.red;
+
+    }
+    
+
 }

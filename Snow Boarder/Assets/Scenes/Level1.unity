@@ -6145,8 +6145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 305d542d812e549729639b190ddff4c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crashDelay: 0.2
+  crashDelay: 1
   crashEffect: {fileID: 3383033076457473369}
+  head: {fileID: 2108461058}
 --- !u!1 &1940154844
 GameObject:
   m_ObjectHideFlags: 0
@@ -6222,6 +6223,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 2
   finishEffect: {fileID: 789970771}
+--- !u!1 &2108461058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3383033076950916080, guid: 07a3d397c741e49a1a73188c87270395, type: 3}
+  m_PrefabInstance: {fileID: 3383033076457473368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3383033076457473368
 PrefabInstance:
   m_ObjectHideFlags: 0
