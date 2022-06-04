@@ -6,13 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class CrashDetector : MonoBehaviour
 {
-    
     [SerializeField] private float crashDelay;
-    
+
     [SerializeField] private ParticleSystem crashEffect;
 
     [SerializeField] private GameObject head;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +31,6 @@ public class CrashDetector : MonoBehaviour
             crashEffect.Play();
             Invoke(nameof(CrashReloadingScene), crashDelay);
         }
-        
     }
 
     void CrashReloadingScene()
@@ -44,8 +42,5 @@ public class CrashDetector : MonoBehaviour
     {
         SpriteRenderer sp = head.GetComponent<SpriteRenderer>();
         sp.color = Color.red;
-
     }
-    
-
 }

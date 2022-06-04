@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             _sf2d.speed = highSpeed;
-            
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
@@ -51,6 +50,4 @@ public class PlayerController : MonoBehaviour
             _rigid2D.AddTorque((-1) * Time.deltaTime * torqueMagnitude);
         }
     }
-    
-    
 } // Class
