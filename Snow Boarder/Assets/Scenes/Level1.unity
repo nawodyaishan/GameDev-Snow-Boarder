@@ -272,7 +272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592638922}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.1829828}
+  m_LocalPosition: {x: 0.3, y: -12.8, z: -0.1829828}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1315,7 +1315,7 @@ SurfaceEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Speed: 30
+  m_Speed: 23
   m_SpeedVariation: 0
   m_ForceScale: 0.1
   m_UseContactForce: 0
@@ -1416,9 +1416,25 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3383033076637423505, guid: 07a3d397c741e49a1a73188c87270395, type: 3}
+      propertyPath: torqueMagnitude
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 3383033076637423514, guid: 07a3d397c741e49a1a73188c87270395, type: 3}
       propertyPath: m_Name
       value: Barry
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383033076637423516, guid: 07a3d397c741e49a1a73188c87270395, type: 3}
+      propertyPath: m_Mass
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383033076637423516, guid: 07a3d397c741e49a1a73188c87270395, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383033076637423516, guid: 07a3d397c741e49a1a73188c87270395, type: 3}
+      propertyPath: m_AngularDrag
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3383033076637423518, guid: 07a3d397c741e49a1a73188c87270395, type: 3}
       propertyPath: m_RootOrder
