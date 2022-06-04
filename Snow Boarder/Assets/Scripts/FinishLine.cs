@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
+
+    [SerializeField] private float delay; 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +24,7 @@ public class FinishLine : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             Debug.Log("You Finished");
-            Invoke(nameof(ReloadingScene), 3);
+            Invoke(nameof(ReloadingScene), delay);
         }
         
     }

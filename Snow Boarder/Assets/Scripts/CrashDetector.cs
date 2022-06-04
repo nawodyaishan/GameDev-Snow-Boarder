@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class CrashDetector : MonoBehaviour
 {
+    
+    [SerializeField] private float crashDelay; 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +24,13 @@ public class CrashDetector : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Crashed");
-            SceneManager.LoadScene("Level1");
+            Invoke(nameof(CrashReloadingScene), crashDelay);
         }
+        
+    }
+
+    void CrashReloadingScene()
+    {
+        SceneManager.LoadScene("Level1");
     }
 }
