@@ -10,12 +10,12 @@ public class FinishLine : MonoBehaviour
 
     [SerializeField] private ParticleSystem finishEffect;
 
-    private AudioSource finishSound;
+    private AudioSource _finishSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        finishSound = GetComponent<AudioSource>();
+        _finishSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,12 +30,13 @@ public class FinishLine : MonoBehaviour
             Debug.Log("You Finished");
             finishEffect.Play();
             Invoke(nameof(ReloadingScene), delay);
-            finishSound.Play();
+            _finishSound.Play();
         }
     }
 
     void ReloadingScene()
     {
         SceneManager.LoadScene("Level1");
+        // FindObjectOfType<LevelLoader>().LoadLevel(2);
     }
 } // Class 
