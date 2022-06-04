@@ -7,7 +7,9 @@ using UnityEngine.SceneManagement;
 public class CrashDetector : MonoBehaviour
 {
     
-    [SerializeField] private float crashDelay; 
+    [SerializeField] private float crashDelay;
+    
+    [SerializeField] private ParticleSystem crashEffect;
     
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class CrashDetector : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Crashed");
+            crashEffect.Play();
             Invoke(nameof(CrashReloadingScene), crashDelay);
         }
         

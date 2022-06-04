@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
+    [SerializeField] private float delay;
 
-    [SerializeField] private float delay; 
-    
+    [SerializeField] private ParticleSystem finishEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,15 +25,13 @@ public class FinishLine : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             Debug.Log("You Finished");
+            finishEffect.Play();
             Invoke(nameof(ReloadingScene), delay);
         }
-        
     }
 
     void ReloadingScene()
     {
         SceneManager.LoadScene("Level1");
     }
-    
-    
 } // Class 
